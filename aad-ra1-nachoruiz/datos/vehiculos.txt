@@ -1,0 +1,6 @@
+MATRICULA;MARCA;MODELO;AÑO;ESTADO
+1234ABC;Seat;Ibiza;2018;En reparación
+5678DEF;Renault;Clio;2020;Reparado
+9012GHI;Ford;Focus;2017;Pendiente
+3456JKL;Toyota;Corolla;2022;En revisión
+7890MNO;Volkswagen;Golf;2019;Reparado
