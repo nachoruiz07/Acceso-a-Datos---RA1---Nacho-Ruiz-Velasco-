@@ -42,3 +42,16 @@ Por eso, estos resultados sirven para comparar los métodos, pero no significa q
 
 - `evidencias/AD-1.b_aleatorio.png`: captura del vehículo antes y después de modificar su año mediante acceso aleatorio.
 - `evidencias/AD-1.b_benchmark.png`: captura de los resultados del benchmark.
+
+
+## AD-1.c · Leer XML (criterio c)
+
+### ¿Qué técnica elegiría para leer un XML de 2 GB?
+
+Para leer un fichero XML de 2 GB elegiría SAX.
+
+Elegiría esta técnica porque permite leer el fichero poco a poco, sin necesidad de cargarlo entero en memoria.
+
+En cambio, DOM carga todo el documento XML en memoria, por lo que un fichero tan grande podría consumir muchos recursos.
+
+Por eso, creo que SAX sería una mejor opción para trabajar con archivos XML de gran tamaño.
