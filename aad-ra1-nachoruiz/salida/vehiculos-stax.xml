@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taller fecha="2026-11-25">
+    <vehiculo matricula="1234ABC">
+        <marca>Seat</marca>
+        <modelo>Ibiza</modelo>
+        <anio>2018</anio>
+        <estado>En reparación</estado>
+    </vehiculo>
+    <vehiculo matricula="5678DEF">
+        <marca>Renault</marca>
+        <modelo>Clio</modelo>
+        <anio>2020</anio>
+        <estado>Reparado</estado>
+    </vehiculo>
+    <vehiculo matricula="9012GHI">
+        <marca>Ford</marca>
+        <modelo>Focus</modelo>
+        <anio>2017</anio>
+        <estado>Pendiente</estado>
+    </vehiculo>
+    <vehiculo matricula="3456JKL">
+        <marca>Toyota</marca>
+        <modelo>Corolla</modelo>
+        <anio>2022</anio>
+        <estado>En revisión</estado>
+    </vehiculo>
+    <vehiculo matricula="7890MNO">
+        <marca>Volkswagen</marca>
+        <modelo>Golf</modelo>
+        <anio>2019</anio>
+        <estado>Reparado</estado>
+    </vehiculo>
+    <vehiculo matricula="2468PQR">
+        <marca>Peugeot</marca>
+        <modelo>308</modelo>
+        <anio>2021</anio>
+        <estado>Revisión &amp; limpieza</estado>
+    </vehiculo>
+</taller>

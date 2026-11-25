@@ -9,6 +9,9 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParserFactory;
+import javax.xml.stream.XMLInputFactory;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerFactory;
 import javax.xml.xpath.XPathFactory;
 import javax.xml.xpath.XPathFactoryConfigurationException;
 
@@ -19,15 +22,15 @@ import java.nio.file.Path;
 
 public final class XmlSeguro {
 
-    // Constructor privado porque no necesito crear objetos de esta clase
+    // No necesitamos crear objetos de esta clase
     private XmlSeguro() {
     }
 
-
     // ========================== DOM SEGURO
 
-    // Crea una fábrica DOM con la configuración de seguridad
-    public static DocumentBuilderFactory fabricaDom() throws ParserConfigurationException {
+    // Prepara un analizador DOM seguro
+    public static DocumentBuilderFactory fabricaDom()
+            throws ParserConfigurationException {
 
         DocumentBuilderFactory f = DocumentBuilderFactory.newInstance();
 
@@ -42,10 +45,9 @@ public final class XmlSeguro {
         return f;
     }
 
-
     // ========================== SAX SEGURO
 
-    // Crea una fábrica SAX con la configuración de seguridad
+    // Prepara un analizador SAX seguro
     public static SAXParserFactory fabricaSax()
             throws ParserConfigurationException, SAXException {
 
@@ -58,10 +60,40 @@ public final class XmlSeguro {
         return f;
     }
 
+    // ========================== STAX SEGURO
+
+    // Prepara un analizador StAX para leer XML de forma segura
+    public static XMLInputFactory fabricaStax() {
+
+        XMLInputFactory f = XMLInputFactory.newFactory();
+
+        f.setProperty(XMLInputFactory.SUPPORT_DTD, false);
+
+        f.setProperty(XMLInputFactory.IS_SUPPORTING_EXTERNAL_ENTITIES, false);
+
+        return f;
+    }
+
+    // ========================== TRANSFORMER SEGURO
+
+    // Prepara la herramienta que permite guardar documentos DOM
+    public static TransformerFactory fabricaTransformer()
+            throws TransformerConfigurationException {
+
+        TransformerFactory f = TransformerFactory.newInstance();
+
+        f.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
+
+        f.setAttribute(XMLConstants.ACCESS_EXTERNAL_DTD, "");
+
+        f.setAttribute(XMLConstants.ACCESS_EXTERNAL_STYLESHEET, "");
+
+        return f;
+    }
 
     // ========================== XPATH SEGURO
 
-    // Crea una fábrica XPath con procesamiento seguro
+    // Prepara las consultas XPath de forma segura
     public static XPathFactory fabricaXPath()
             throws XPathFactoryConfigurationException {
 
@@ -72,10 +104,9 @@ public final class XmlSeguro {
         return f;
     }
 
-
     // ========================== LEER XML CON DOM
 
-    // Abre un fichero XML y lo convierte en un documento DOM
+    // Abre un XML y devuelve su contenido como un documento DOM
     public static Document parsearDom(Path fichero)
             throws IOException, SAXException, ParserConfigurationException {
 
