@@ -1,0 +1,10 @@
+{
+  "vehiculos": [
+    {"matricula": "1234ABC", "marca": "Seat", "modelo": "Ibiza", "anio": 2018, "estado": "En reparación"},
+    {"matricula": "5678DEF", "marca": "Renault", "modelo": "Clio", "anio": 2020, "estado": "Reparado"},
+    {"matricula": "9012GHI", "marca": "Ford", "modelo": "Focus", "anio": 2017, "estado": "Pendiente"},
+    {"matricula": "3456JKL", "marca": "Toyota", "modelo": "Corolla", "anio": 2022, "estado": "En revisión"},
+    {"matricula": "7890MNO", "marca": "Volkswagen", "modelo": "Golf", "anio": 2019, "estado": "Reparado"},
+    {"matricula": "2468PQR", "marca": "Peugeot", "modelo": "308", "anio": 2021, "estado": "Revisión & limpieza"}
+  ]
+}
