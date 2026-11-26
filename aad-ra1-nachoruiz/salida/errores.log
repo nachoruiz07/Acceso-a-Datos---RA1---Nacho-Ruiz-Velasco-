@@ -1,0 +1,131 @@
+nov 26, 2026 11:34:56 A. M. es.nachoruiz.servicio.ServicioTaller error
+WARNING: No existe el fichero «vehiculos-no-existe.xml».
+java.nio.file.NoSuchFileException: datos/vehiculos-no-existe.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:213)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:244)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:357)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:399)
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:371)
+	at java.base/java.nio.file.Files.newInputStream(Files.java:154)
+	at es.nachoruiz.xml.XmlSeguro.parsearDom(XmlSeguro.java:117)
+	at es.nachoruiz.xml.LectorXml.leerConDom(LectorXml.java:38)
+	at es.nachoruiz.servicio.ServicioTaller.lambda$cargar$0(ServicioTaller.java:87)
+	at es.nachoruiz.servicio.ServicioTaller.ejecutar(ServicioTaller.java:180)
+	at es.nachoruiz.servicio.ServicioTaller.cargar(ServicioTaller.java:84)
+	at es.nachoruiz.MainExcepciones.lambda$main$0(MainExcepciones.java:46)
+	at es.nachoruiz.MainExcepciones.probar(MainExcepciones.java:153)
+	at es.nachoruiz.MainExcepciones.main(MainExcepciones.java:44)
+
+nov 26, 2026 11:34:56 A. M. es.nachoruiz.servicio.ServicioTaller error
+WARNING: No tienes permiso para acceder a «vehiculos-sin-permisos.xml».
+java.nio.file.AccessDeniedException: datos/vehiculos-sin-permisos.xml
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:90)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:213)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:244)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:357)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:399)
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:371)
+	at java.base/java.nio.file.Files.newInputStream(Files.java:154)
+	at es.nachoruiz.xml.XmlSeguro.parsearDom(XmlSeguro.java:117)
+	at es.nachoruiz.xml.LectorXml.leerConDom(LectorXml.java:38)
+	at es.nachoruiz.servicio.ServicioTaller.lambda$cargar$0(ServicioTaller.java:87)
+	at es.nachoruiz.servicio.ServicioTaller.ejecutar(ServicioTaller.java:180)
+	at es.nachoruiz.servicio.ServicioTaller.cargar(ServicioTaller.java:84)
+	at es.nachoruiz.MainExcepciones.probarSinPermisos(MainExcepciones.java:191)
+	at es.nachoruiz.MainExcepciones.main(MainExcepciones.java:54)
+
+nov 26, 2026 11:34:56 A. M. es.nachoruiz.servicio.ServicioTaller error
+WARNING: El XML de «vehiculos-malformado.xml» no está bien formado. (línea 10, columna 7).
+org.xml.sax.SAXParseException; lineNumber: 10; columnNumber: 7; The element type "estado" must be terminated by the matching end-tag "</estado>".
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1465)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:1705)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2909)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:635)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:551)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:890)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:826)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:137)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:248)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:335)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:122)
+	at es.nachoruiz.xml.XmlSeguro.parsearDom(XmlSeguro.java:119)
+	at es.nachoruiz.xml.LectorXml.leerConDom(LectorXml.java:38)
+	at es.nachoruiz.servicio.ServicioTaller.lambda$cargar$0(ServicioTaller.java:87)
+	at es.nachoruiz.servicio.ServicioTaller.ejecutar(ServicioTaller.java:180)
+	at es.nachoruiz.servicio.ServicioTaller.cargar(ServicioTaller.java:84)
+	at es.nachoruiz.MainExcepciones.lambda$main$2(MainExcepciones.java:74)
+	at es.nachoruiz.MainExcepciones.probar(MainExcepciones.java:153)
+	at es.nachoruiz.MainExcepciones.main(MainExcepciones.java:72)
+
+nov 26, 2026 11:34:56 A. M. es.nachoruiz.servicio.ServicioTaller error
+WARNING: El XML de «vehiculos-doctype.xml» contiene una declaración DOCTYPE no permitida. (línea 3, columna 10).
+org.xml.sax.SAXParseException; lineNumber: 3; columnNumber: 10; DOCTYPE is disallowed when the feature "http://apache.org/xml/features/disallow-doctype-decl" set to true.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1465)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:928)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:635)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:551)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:890)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:826)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:137)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:248)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:335)
+	at java.xml/javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:122)
+	at es.nachoruiz.xml.XmlSeguro.parsearDom(XmlSeguro.java:119)
+	at es.nachoruiz.xml.LectorXml.leerConDom(LectorXml.java:38)
+	at es.nachoruiz.servicio.ServicioTaller.lambda$cargar$0(ServicioTaller.java:87)
+	at es.nachoruiz.servicio.ServicioTaller.ejecutar(ServicioTaller.java:180)
+	at es.nachoruiz.servicio.ServicioTaller.cargar(ServicioTaller.java:84)
+	at es.nachoruiz.MainExcepciones.lambda$main$3(MainExcepciones.java:84)
+	at es.nachoruiz.MainExcepciones.probar(MainExcepciones.java:153)
+	at es.nachoruiz.MainExcepciones.main(MainExcepciones.java:82)
+
+nov 26, 2026 11:34:56 A. M. es.nachoruiz.servicio.ServicioTaller error
+WARNING: Hay un número con formato incorrecto en «vehiculos-anio-incorrecto.xml».
+java.lang.NumberFormatException: For input string: "dos mil dieciocho"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:565)
+	at java.base/java.lang.Integer.parseInt(Integer.java:662)
+	at es.nachoruiz.xml.LectorXml.aVehiculo(LectorXml.java:61)
+	at es.nachoruiz.xml.LectorXml.leerConDom(LectorXml.java:46)
+	at es.nachoruiz.servicio.ServicioTaller.lambda$cargar$0(ServicioTaller.java:87)
+	at es.nachoruiz.servicio.ServicioTaller.ejecutar(ServicioTaller.java:180)
+	at es.nachoruiz.servicio.ServicioTaller.cargar(ServicioTaller.java:84)
+	at es.nachoruiz.MainExcepciones.lambda$main$4(MainExcepciones.java:94)
+	at es.nachoruiz.MainExcepciones.probar(MainExcepciones.java:153)
+	at es.nachoruiz.MainExcepciones.main(MainExcepciones.java:92)
+
+nov 26, 2026 11:34:56 A. M. es.nachoruiz.servicio.ServicioTaller error
+WARNING: Hay datos no válidos en «vehiculos-datos-invalidos.xml»: El año del vehículo debe ser positivo.
+java.lang.IllegalArgumentException: El año del vehículo debe ser positivo.
+	at es.nachoruiz.servicio.ServicioTaller.validarVehiculos(ServicioTaller.java:153)
+	at es.nachoruiz.servicio.ServicioTaller.lambda$cargar$0(ServicioTaller.java:90)
+	at es.nachoruiz.servicio.ServicioTaller.ejecutar(ServicioTaller.java:180)
+	at es.nachoruiz.servicio.ServicioTaller.cargar(ServicioTaller.java:84)
+	at es.nachoruiz.MainExcepciones.lambda$main$5(MainExcepciones.java:104)
+	at es.nachoruiz.MainExcepciones.probar(MainExcepciones.java:153)
+	at es.nachoruiz.MainExcepciones.main(MainExcepciones.java:102)
+
+nov 26, 2026 11:34:56 A. M. es.nachoruiz.servicio.ServicioTaller error
+WARNING: Hay datos no válidos en «vehiculos-duplicado.xml»: Hay vehículos con matrículas repetidas.
+java.lang.IllegalArgumentException: Hay vehículos con matrículas repetidas.
+	at es.nachoruiz.servicio.ServicioTaller.validarVehiculos(ServicioTaller.java:161)
+	at es.nachoruiz.servicio.ServicioTaller.lambda$cargar$0(ServicioTaller.java:90)
+	at es.nachoruiz.servicio.ServicioTaller.ejecutar(ServicioTaller.java:180)
+	at es.nachoruiz.servicio.ServicioTaller.cargar(ServicioTaller.java:84)
+	at es.nachoruiz.MainExcepciones.lambda$main$6(MainExcepciones.java:114)
+	at es.nachoruiz.MainExcepciones.probar(MainExcepciones.java:153)
+	at es.nachoruiz.MainExcepciones.main(MainExcepciones.java:112)
+

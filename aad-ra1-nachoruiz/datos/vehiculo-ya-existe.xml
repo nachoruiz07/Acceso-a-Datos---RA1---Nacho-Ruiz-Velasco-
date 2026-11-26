@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<taller fecha="2026-11-26">
+
+    <vehiculo matricula="3456JKL">
+        <marca>Toyota</marca>
+        <modelo>Corolla</modelo>
+        <anio>2022</anio>
+        <estado>En revisión</estado>
+    </vehiculo>
+
+</taller>

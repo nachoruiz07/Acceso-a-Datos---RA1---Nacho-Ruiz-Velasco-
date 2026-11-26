@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<taller fecha="2026-11-26">
+
+    <vehiculo matricula="5678DEF">
+        <marca>Renault</marca>
+        <modelo>Clio</modelo>
+        <anio>2020</anio>
+        <estado>Reparado</estado>
+    </vehiculo>
+
+</taller>

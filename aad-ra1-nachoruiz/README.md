@@ -55,3 +55,17 @@ Elegiría esta técnica porque permite leer el fichero poco a poco, sin necesida
 En cambio, DOM carga todo el documento XML en memoria, por lo que un fichero tan grande podría consumir muchos recursos.
 
 Por eso, creo que SAX sería una mejor opción para trabajar con archivos XML de gran tamaño.
+
+## AD-1.f · Gestionar excepciones (criterio f)
+
+### ¿Por qué están ordenados así los catch?
+
+He ordenado los `catch` desde las excepciones más específicas hasta las más generales.
+
+Por ejemplo, `NoSuchFileException` va antes que `IOException`, porque la primera hereda de la segunda.
+
+También he colocado `SAXParseException` antes que `SAXException` y `NumberFormatException` antes que `IllegalArgumentException`.
+
+Si cambiara ese orden y pusiera primero las excepciones generales, Java detectaría que algunos `catch` específicos nunca podrían ejecutarse y daría un error de compilación.
+
+Por último, he dejado `Exception` al final para gestionar cualquier otra excepción que no se haya tratado anteriormente.

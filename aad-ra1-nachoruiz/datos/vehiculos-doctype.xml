@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE taller [
+        <!ENTITY prueba "Texto externo">
+        ]>
+
+<taller fecha="2026-11-26">
+
+    <vehiculo matricula="1234ABC">
+        <marca>Seat</marca>
+        <modelo>Ibiza</modelo>
+        <anio>2018</anio>
+        <estado>&prueba;</estado>
+    </vehiculo>
+
+</taller>
